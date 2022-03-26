@@ -17,6 +17,7 @@
 
 /*===   VARIABLES ===*/
     $base: 4px;
+	$transition: 0.2s;
 /*=== / VARIABLES ===*/
 
 html {
@@ -41,6 +42,34 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+h1 {
+	font-weight: 100;
+	font-size: 40px;
+	color: #fff;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 18px;
+}
+
 p {
 	margin: 0; 
 }
+
+.section-outer {
+	padding: 0 $base*3;
+}
+
+.section-inner {
+	max-width: 940px;
+    margin: 0 auto;
+}
+
+
+/*===   intro ===*/
+.section-outer-intro {
+	background: #2b2f37
+	url("../img/bg/intro-bg.png") no-repeat; background-size: cover;
+}
+/*=== / intro ===*/
