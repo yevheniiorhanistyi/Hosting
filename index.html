@@ -5,72 +5,253 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Hosting</title>
 </head>
 
 <body>
-    <!-- intro -->
+    <!-- INTRO -->
     <section class="section-outer section-outer-intro">
         <section class="section-inner section-inner-intro">
             <header class="header">
                 <div class="header-logo">
-                    <img src="/img/logo/logo.png" alt="">
-                    <p class="name of company">nine cloud hosting</p>
+                    <img class="header-logo__img" src="img/logo.png" alt="">
+                    <p class="name-of-company">nine cloud <span>hosting</span></p>
                 </div>
                 <ul class="nav">
-                    <li class="nav_item">hosting</li>
-                    <li class="nav_item">Domains</li>
-                    <li class="nav_item">features</li>
-                    <li class="nav_item">testimonials</li>
-                    <li class="nav_item">contacts</li>
+                    <li class="nav__item">
+                        <a class="nav__item__link" href="#">hosting</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__item__link" href="#">Domains</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__item__link" href="#">features</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__item__link" href="#">testimonials</a>
+                    </li>
+                    <li class="nav__item">
+                        <a class="nav__item__link" href="#">contacts</a>
+                    </li>
                 </ul>
-                <button class="btn">LOGIN</button>
+                <button class="btn btn__nav">LOGIN</button>
             </header>
             <div class="content">
                 <h1 class="intro-title">Strength in equality.The power of dreams</h1>
-                <p class="intro-subtitle">Web hosting for $9.95/mo $2.95/mo. Sign up today and also get a free
+                <p class="text intro-text">Web hosting for $9.95/mo $2.95/mo. Sign up today and also get a free
                     1-on-1 consultation to help you get started.</p>
-                <button class="btn"></button>
-                <a href="#">LEARN MORE</a>
+                <button class="btn content__btn">Get started</button>
+                <a class="links content__link" href="#">LEARN MORE</a>
             </div>
-            <div class="advantages">
-
-                <div class="advantages__item">
-                    <img src="/img/advantages/clock .png" alt="">
-                    <h2>99,9% UPtime guarantee</h2>
-                    <p>Disk space in all packages has been increased by ten times!</p>
-                    <a href="#">READ MORE</a>
-                </div>
-
-                <div class="advantages__item">
-                    <img src="/img/advantages/gear.png" alt="">
-                    <h2>Managed Services</h2>
-                    <p>Leave the set up, management and monitoring to us.</p>
-                    <a href="#">READ MORE</a>
-                </div>
-
-                <div class="advantages__item">
-                    <img src="/img/advantages/cloud.png" alt="">
-                    <h2>Cloud Services</h2>
-                    <p>Reliable, high- performance cloud that meets your changing business demands.</p>
-                    <a href="#">READ MORE</a>
-                </div>
-
-            </div>
-            <!--/advantages-->
         </section>
         <!--/section-inner-->
+        <!--advanteges-->
+        <div class="advantages">
+            <div class="advantages-wrapper">
+                <div class="advantages-wrapper__item">
+                    <img class="advantages-wrapper__item__img" src="img/clock .png" alt="">
+                    <h2 class="advantages-wrapper__item__title">99,9% UPtime guarantee</h2>
+                    <p class="advantages-wrapper__item__text">Disk space in all packages has been increased by ten
+                        times!</p>
+                    <a class="links advantages-wrapper__item__link" href="#">READ MORE</a>
+                </div>
+                <div class="advantages-wrapper__item">
+                    <img class="advantages-wrapper__item__img" src="img/gear.png" alt="">
+                    <h2 class="advantages-wrapper__item__title">Managed Services</h2>
+                    <p class="advantages-wrapper__item__text">Leave the set up, management and monitoring to us.</p>
+                    <a class="links advantages-wrapper__item__link" href="#">READ MORE</a>
+                </div>
+                <div class="advantages-wrapper__item">
+                    <img class="advantages-wrapper__item__img" src="img/cloud.png" style="width: 86px; height: 71px;"
+                        alt="">
+                    <h2 class="advantages-wrapper__item__title">Cloud Services</h2>
+                    <p class="advantages-wrapper__item__text">Reliable, high- performance cloud that meets your changing
+                        business demands.</p>
+                    <a class="links advantages-wrapper__item__link" href="#">READ MORE</a>
+                </div>
+            </div>
+        </div>
+        <!--/advanteges-->
     </section>
-    <!--/section-outer-->
-    <!--/ intro -->
+    <!--/section-outer-intro-->
 
+    <!--DOMAIN-->
+    <section class="section-outer section-outer-domain">
+        <section class="section-inner section-inner-domain">
+            <div class="domain-wrapper">
+                <h1 class="domain-title">Search Domain</h1>
+                <p class="text domain-text">Save big on domain options like .com, .co, .biz, .net, .org and grab new
+                    domains
+                    like .xyz,
+                    .club, .guru, .email, .link, .today, and more!</p>
+                <div class="search" style="background-image: url(img/input-bg.png);">
+                    <input class="search__input" type="text" placeholder="domain.com">
+                    <button class="btn search__btn">find domain</button>
+                </div>
+            </div>
+            <div class="action">
+                <div class="action-item">
+                    <img src="img/loupe.png" style="width: 26px; height: 28px;" alt="">
+                    <div class="action-item__content">
+                        <div class="action-item__content__title">find domain</div>
+                        <div class="text action-item__content__text">Etiam efficitur, risus sit amet sodales laoreet,
+                            sem mauris
+                            interdum
+                            lectus, nec luctus est.</div>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <img src="img/mouse.png" style="width: 19px; height: 36px;" alt="">
+                    <div class="action-item__content">
+                        <div class="action-item__content__title">choose a plan</div>
+                        <div class="text action-item__content__text">Vestibulum ante ipsum primis in faucibus orci
+                            luctus et
+                            ultrices
+                            posuere cubilia.</div>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <img src="img/web.png" style="width: 27px; height: 26px;" alt="">
+                    <div class="action-item__content">
+                        <div class="action-item__content__title">build your website</div>
+                        <div class="text action-item__content__text">Curabitur imperdiet enim id faucibus sollicitudin.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/section-inner-domain-->
+    </section>
+    <!--/section-outer-domain-->
+
+    <!-- FEATURES -->
+    <section class="section-outer section-outer-features">
+        <section class="section-inner section-inner-features">
+            <h1 class="features-title">Features</h1>
+            <div class="action">
+                <div class="action-item">
+                    <img src="img/hurt.png" style="width: 27px; height: 24px;" alt="">
+                    <div class="action-item__content features-content">
+                        <div class="action-item__content__title features-content__title">Made with love</div>
+                        <div class="text action-item__content__text features-content__text">Curabitur imperdiet enim id
+                            faucibus
+                            sollicitudin. </div>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <img src="img/data.png" style="width: 27px; height: 24px;" alt="">
+                    <div class="action-item__content features-content">
+                        <div class="action-item__content__title features-content__title">Databases</div>
+                        <div class="text action-item__content__text features-content__text">Curabitur imperdiet enim id
+                            faucibus
+                            sollicitudin.
+                        </div>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <img src="img/vps.png" style="width: 27px; height: 24px;" alt="">
+                    <div class="action-item__content features-content">
+                        <div class="action-item__content__title features-content__title">VPS server</div>
+                        <div class="text action-item__content__text features-content__text">Phasellus aliquam arcu quis
+                            lectus aliquam, sed
+                            dignissim ligula efficitur. </div>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <img src="img/lock.png" style="width: 22px; height: 24px;" alt="">
+                    <div class="action-item__content">
+                        <div class="action-item__content__title features-content__title">Fully secured</div>
+                        <div class="text action-item__content__text features-content__text">Phasellus aliquam arcu quis
+                            lectus aliquam
+                            efficitur.
+                        </div>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <img src="img/calendar.png" style="width: 26px; height: 24px;" alt="">
+                    <div class="action-item__content features-content">
+                        <div class="action-item__content__title features-content__title">Daily backups</div>
+                        <div class="text action-item__content__text features-content__text">Aliquam nisl lectus, rhoncus
+                            nec ex vestibulum.
+                        </div>
+                    </div>
+                </div>
+                <div class="action-item">
+                    <img src="img/cloud-features.png" style="width: 30px; height: 23px;" alt="">
+                    <div class="action-item__content features-content">
+                        <div class="action-item__content__title features-content__title">Cloud hosted</div>
+                        <div class="text action-item__content__text features-content__text">Etiam sagittis tellus at
+                            lacus cursus, non
+                            molestie nulla.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/section-inner-features-->
+    </section>
+    <!-- /section-outer-features -->
+
+    <!--PLAN-->
+    <section class="section-outer section-outer-plan">
+        <section class="section-inner section-inner-plan">
+            <h1 class="plan-title">Pick your plan</h1>
+            <div class="text plan-text">Upgrade, downgrade or cancel anytime.</div>
+            <div class="plans-wrapper">
+                <div class="plans-wrapper__item">
+                    <div class="preview">
+                        <h2 class="preview__title">Personal</h2>
+                        <p class="preview__subtitle">Perfect Pack for Small Business</p>
+                    </div>
+                    <ul class="plan-list">
+                        <li class="plan-list__item">$ <span>25</span> / mo</li>
+                        <li class="plan-list__item"><span>3 Gb</span> of storage</li>
+                        <li class="plan-list__item"><span>10</span> repositories</li>
+                        <li class="plan-list__item"><span>10</span> parked domains</li>
+                        <li class="plan-list__item"><span>25 FTP</span> accounts</li>
+                    </ul>
+                    <button class="btn plans-button">order now</button>
+                </div>
+                <div class="plans-wrapper__item plans-wrapper__item--active">
+                    <div class="preview">
+                        <h2 class="preview__title">business</h2>
+                        <p class="preview__subtitle">Perfect Pack for Small Business</p>
+                    </div>
+                    <ul class="plan-list">
+                        <li class="plan-list__item">$ <span>45</span> / mo</li>
+                        <li class="plan-list__item"><span>3 Gb</span> of storage</li>
+                        <li class="plan-list__item"><span>10</span> repositories</li>
+                        <li class="plan-list__item"><span>10</span> parked domains</li>
+                        <li class="plan-list__item"><span>25 FTP</span> accounts</li>
+                    </ul>
+                    <button class="btn plans-button">order now</button>
+                </div>
+                <div class="plans-wrapper__item">
+                    <div class="preview">
+                        <h2 class="preview__title">Personal</h2>
+                        <p class="preview__subtitle">Perfect Pack for Small Business</p>
+                    </div>
+                    <ul class="plan-list">
+                        <li class="plan-list__item">$ <span>65</span> / mo</li>
+                        <li class="plan-list__item"><span>3 Gb</span> of storage</li>
+                        <li class="plan-list__item"><span>10</span> repositories</li>
+                        <li class="plan-list__item"><span>10</span> parked domains</li>
+                        <li class="plan-list__item"><span>25 FTP</span> accounts</li>
+                    </ul>
+                    <button class="btn plans-button">order now</button>
+                </div>
+            </div>
+            <p class="text plan-link">If you need help finding a plan that`s right for you,
+                just <a href="#">chat with a live person.</a></p>
+        </section>
+        <!--/section-inner-plan-->
+    </section><!-- /section-outer-plan -->
     <link
-        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@100;400;700&family=Roboto:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Roboto:wght@100;300;400;700&display=swap"
         rel="stylesheet">
-    <script src="/js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
