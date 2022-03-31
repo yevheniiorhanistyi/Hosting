@@ -100,6 +100,19 @@ p {
 	  }
 }
 
+.grey-button {
+	display: flex;
+	font-size: 14px;
+	color: #fff;
+	border: 0;
+	padding: $base*5 $base*17;
+	margin: 0 auto;
+}
+
+.grey-button:hover {
+	background-color: #e84c3d;
+}
+
 .links {
 	@include PTSans();
 	position: relative;
@@ -155,6 +168,7 @@ p {
 .header-logo {
 	display: flex;
 	align-items: center;
+	cursor: pointer;
 
 	img {
 		display: flex;
@@ -490,7 +504,7 @@ p {
 			color: #fff;
 		}
 
-		.plans-button {
+		.grey-button {
 			background-color: #e84c3d;
 		}
 	}
@@ -518,18 +532,6 @@ p {
 	}
 }
 
-.plans-button {
-	display: flex;
-	font-size: 14px;
-	color: #fff;
-	border: 0;
-	padding: $base*5 $base*17;
-	margin: 0 auto;
-}
-
-.plans-button:hover {
-	background-color: #e84c3d;
-}
 
 .plan-link {
 	max-width: 340px;
@@ -621,8 +623,8 @@ p {
 
 /*===   BLOG ===*/
 
-.section-outer-blog {
-	min-height: 100vh;
+.section-inner-blog {
+	margin-bottom: $base*15;
 }
 
 .blog-title {
@@ -631,4 +633,80 @@ p {
 	margin-bottom: $base*7;
 }
 
+.blog-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 760px;
+	margin: 0 auto $base*10;
+}
+
+.blog-item {
+	max-width: 480px;
+	padding: 0 $base;
+	&__title {
+		font-weight: 400;
+		margin-bottom: $base*5;
+	}
+}
+
+.blog-activity {
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+
+	max-width: 300px;
+	margin-bottom: $base*5;
+
+	&__date{
+		color: #5e5e5e;
+	}
+
+	&__comments{
+
+		span {
+			font-weight: 700;
+		}
+	}
+}
+
+.likes {
+	display: flex;
+	align-items: center;
+
+	&__num {
+		font-weight: 700;
+		margin-left: $base;
+	}
+}
+
+.blog-text {
+
+	.blog-link {
+		font-size: 14px;
+		color: #e84c3d;
+	}
+
+	.blog-link::before {
+		bottom: 2px;
+		background-color: #e84c3d;
+	}
+}
+
+.blog-photo {
+	margin-left: $base*2;
+}
+
 /*=== / BLOG ===*/
+
+/*===   LOCATION ===*/
+.section-outer-location {
+	height: 540px;
+	background: url("../img/location-bg.png")no-repeat;
+	background-size: cover;
+}
+
+.location-title {
+	color: #000;
+}
+/*=== / LOCATION ===*/
