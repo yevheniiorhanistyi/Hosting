@@ -51,6 +51,11 @@ h1 {
 	font-weight: 100;
 	font-size: 40px;
 	color: #fff;
+
+	@media (max-width: 780px) {
+		font-size: 28px;
+	}
+
 }
 
 h2 {
@@ -160,9 +165,14 @@ p {
 
 .section-inner-intro {
 	min-height: 580px;
+
+	@media (max-width: 780px) {
+		min-height: 440px;
+	}
 }
 
 .header {
+	position: relative;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -188,7 +198,7 @@ p {
 		text-transform: uppercase;
 		color: #fff;
 
-		margin-left: $base*5;
+		margin-left: $base*4;
 
 		span {
 			color: #e84c3d;
@@ -203,11 +213,14 @@ p {
 	display: flex;
 	flex-wrap: wrap;
 
-	&__item {
+	@media (max-width: 780px) {
+		display: none;
+	}
 
-		&+& {
-			margin-left: $base*6;
-		}
+	&__item {
+		text-align: center;
+		padding: $base*4 $base*3;
+
 
 		a {
 			@include PTSans;
@@ -226,6 +239,7 @@ p {
 	}
 }
 
+
 .btn__nav {
 	font-weight: 700;
 	color: #fff;
@@ -238,11 +252,58 @@ p {
 	&:hover {
 		background-color: #e84c3d;
 	}
+
+	@media (max-width: 780px) {
+		display: none;
+	}
+}
+
+.btn-burger {
+	position: fixed;
+	top: 4%;
+	right: 2%;
+	z-index: 25;
+	background-color: transparent;
+	border: 0;
+	padding: $base*2 $base*4;
+
+	@media (min-width: 780px) {
+		display: none;
+	}
+
+	&__line {
+		display: block;
+		width: $base*6;
+		height: $base/2;
+		background-color: #e84c3d;
+
+		&+& {
+			margin-top: $base;
+		}
+	}
+
+	&--active {
+		span:nth-of-type(1) {
+			display: none;
+		}
+
+		span:nth-of-type(2) {
+			transform: translate(0%, 150%) rotate(45deg);
+		}
+
+		span:nth-of-type(3) {
+			transform: translate(0%, -150%) rotate(-45deg);
+		}
+	}
 }
 
 .content {
 	text-align: center;
 	margin-top: $base*28;
+
+	@media (max-width: 780px) {
+		margin-top: $base*15;
+	}
 
 	.intro-title {
 		margin-bottom: $base*5;
@@ -263,6 +324,10 @@ p {
 
 		padding: $base*4 $base*16;
 		margin: 0 auto $base*5;
+
+		@media (max-width: 540px) {
+			padding: $base*4 $base*7;
+		}
 
 		&:hover {
 			background-color: darken(#e84c3d, 5%);
@@ -293,6 +358,10 @@ p {
 	padding: $base*10 $base;
 	margin: 0 auto;
 	transition: $transition;
+
+	@media (max-width: 780px) {
+		padding: $base*3 $base;
+	}
 
 	&__img {
 		margin-bottom: $base*8;
@@ -393,6 +462,10 @@ p {
 
 	img {
 		margin-left: $base*10;
+
+		@media (max-width: 780px) {
+			margin-left: $base;
+		}
 	}
 
 	&__content {
@@ -407,6 +480,10 @@ p {
 		&__text {
 			max-width: 214px;
 			color: #98a3a3;
+
+			@media (max-width: 780px) {
+				max-width: 268px;
+			}
 		}
 	}
 }
@@ -445,6 +522,10 @@ p {
 
 .section-inner-plan {
 	padding-top: $base*20;
+
+	@media (max-width: 850px) {
+		padding-top: $base*8;
+	}
 }
 
 .plan-title {
@@ -466,6 +547,10 @@ p {
 	max-width: 822px;
 	margin: 0 auto $base*13;
 	border: 1px solid rgba(43, 47, 55, 0.2);
+
+	@media (max-width: 850px) {
+		max-width: 276px;
+	}
 
 
 	&__item {
@@ -645,6 +730,7 @@ p {
 
 .blog-wrapper {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	max-width: 760px;
@@ -654,6 +740,10 @@ p {
 .blog-item {
 	max-width: 480px;
 	padding: 0 $base;
+
+	@media (max-width: 760px) {
+		margin: 0 auto;
+	}
 
 	&__title {
 		font-weight: 400;
@@ -705,7 +795,11 @@ p {
 }
 
 .blog-photo {
-	margin-left: $base*2;
+	margin: $base*2 auto;
+
+	@media (max-width: 760px) {
+		display: none;
+	}
 }
 
 /*=== / BLOG ===*/
@@ -721,6 +815,11 @@ p {
 	padding-bottom: $base*40;
 	padding-left: $base*40;
 
+	@media (max-width: 760px) {
+		padding-top: $base*7;
+		padding-bottom: $base*7;
+		padding-left: $base*5;
+	}
 
 	.location-title {
 		font-size: 32px;
@@ -768,6 +867,7 @@ p {
 
 .subscribe-wrapper {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	padding: $base*4 $base*4 0;
@@ -778,7 +878,7 @@ p {
 	flex-wrap: wrap;
 	text-align: center;
 	max-width: 370px;
-	margin-bottom: $base*4;
+	margin: 0 auto $base*4;
 }
 
 .subscribe-text {
@@ -788,6 +888,10 @@ p {
 	padding-right: $base*12;
 	padding-bottom: $base*2;
 	margin: 0 auto;
+
+	@media (max-width: 790px) {
+		display: none;
+	}
 }
 
 .socials-items {
@@ -811,7 +915,7 @@ p {
 	flex-wrap: wrap;
 	align-items: center;
 	max-width: 470px;
-	margin-bottom: $base*4;
+	margin: 0 auto $base*4;
 
 
 	.send {
@@ -838,7 +942,7 @@ p {
 			font-size: 14px;
 			color: #fff;
 			background-color: #e84c3d;
-			padding: $base*3 $base*7;
+			padding: $base*2 $base*7;
 			border: 0;
 		}
 
@@ -867,6 +971,10 @@ p {
 	padding: $base*5 $base;
 	margin: 0 auto;
 
+	@media (max-width: 760px) {
+		display: block;
+	}
+
 	&__title {
 		font-size: 14px;
 		font-weight: 700;
@@ -879,12 +987,17 @@ p {
 		color: #5e5e5e;
 		padding-bottom: $base*5;
 		transition: $transition;
+
+		@media (max-width: 760px) {
+			display: none;
+		}
 	}
 
 	&__tell {
 		font-size: 18px;
 		font-weight: 700;
 		color: #000;
+		transition: $transition;
 	}
 
 	&__mail {
