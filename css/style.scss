@@ -156,7 +156,9 @@ p {
 }
 
 /*===   INTRO ===*/
+
 .section-outer-intro {
+	position: relative;
 	background: linear-gradient(300deg, rgba(43, 47, 55, 0.8995973389355743) 14%, rgba(43, 47, 55, 0) 36%),
 		url("../img/intro-bg.png") no-repeat;
 	background-size: cover;
@@ -236,7 +238,32 @@ p {
 		a:hover {
 			color: #e84c3d;
 		}
+
+		&--active {
+			margin: auto;
+
+			a {
+				font-size: 24px;
+			}
+		}
 	}
+
+	&--active {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		color: #fff;
+		background-color: rgba(0, 0, 0, .8);
+		z-index: 300;
+
+	}
+
 }
 
 
@@ -252,30 +279,24 @@ p {
 	&:hover {
 		background-color: #e84c3d;
 	}
-
-	@media (max-width: 780px) {
-		display: none;
-	}
 }
 
 .btn-burger {
+	display: none;
 	position: fixed;
 	top: 4%;
 	right: 2%;
-	z-index: 25;
+	z-index: 300;
 	background-color: transparent;
 	border: 0;
 	padding: $base*2 $base*4;
-
-	@media (min-width: 780px) {
-		display: none;
-	}
 
 	&__line {
 		display: block;
 		width: $base*6;
 		height: $base/2;
 		background-color: #e84c3d;
+		transition: $transition;
 
 		&+& {
 			margin-top: $base;
@@ -283,6 +304,7 @@ p {
 	}
 
 	&--active {
+
 		span:nth-of-type(1) {
 			display: none;
 		}
@@ -297,12 +319,17 @@ p {
 	}
 }
 
+.btn-burger-show {
+	display: block;
+}
+
 .content {
 	text-align: center;
 	margin-top: $base*28;
 
 	@media (max-width: 780px) {
 		margin-top: $base*15;
+		padding-bottom: $base*8;
 	}
 
 	.intro-title {
@@ -312,6 +339,10 @@ p {
 	.intro-text {
 		color: #fff;
 		margin: 0 auto $base*10;
+
+		@media (max-width: 540px) {
+			max-width: 300px;
+		}
 	}
 
 	&__btn {
@@ -901,7 +932,7 @@ p {
 
 	.socials-link {
 		display: inline-block;
-		margin-right: $base*8;
+		margin: 0 $base*4;
 		opacity: .2;
 	}
 

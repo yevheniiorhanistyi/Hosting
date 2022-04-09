@@ -149,6 +149,7 @@ p {
 
 /*===   INTRO ===*/
 .section-outer-intro {
+  position: relative;
   background: linear-gradient(300deg, rgba(43, 47, 55, 0.8995973389) 14%, rgba(43, 47, 55, 0) 36%), url("../img/intro-bg.png") no-repeat;
   background-size: cover;
   background-color: #2b2f37;
@@ -238,6 +239,31 @@ p {
 .nav__item a:hover {
   color: #e84c3d;
 }
+.nav__item--active {
+  margin: auto;
+}
+.nav__item--active a {
+  font-size: 24px;
+}
+.nav--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 300;
+}
 
 .btn__nav {
   font-weight: 700;
@@ -251,31 +277,24 @@ p {
 .btn__nav:hover {
   background-color: #e84c3d;
 }
-@media (max-width: 780px) {
-  .btn__nav {
-    display: none;
-  }
-}
 
 .btn-burger {
+  display: none;
   position: fixed;
   top: 4%;
   right: 2%;
-  z-index: 25;
+  z-index: 300;
   background-color: transparent;
   border: 0;
   padding: 8px 16px;
-}
-@media (min-width: 780px) {
-  .btn-burger {
-    display: none;
-  }
 }
 .btn-burger__line {
   display: block;
   width: 24px;
   height: 2px;
   background-color: #e84c3d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .btn-burger__line + .btn-burger__line {
   margin-top: 4px;
@@ -292,6 +311,10 @@ p {
           transform: translate(0%, -150%) rotate(-45deg);
 }
 
+.btn-burger-show {
+  display: block;
+}
+
 .content {
   text-align: center;
   margin-top: 112px;
@@ -299,6 +322,7 @@ p {
 @media (max-width: 780px) {
   .content {
     margin-top: 60px;
+    padding-bottom: 32px;
   }
 }
 .content .intro-title {
@@ -307,6 +331,11 @@ p {
 .content .intro-text {
   color: #fff;
   margin: 0 auto 40px;
+}
+@media (max-width: 540px) {
+  .content .intro-text {
+    max-width: 300px;
+  }
 }
 .content__btn {
   font-size: 16px;
@@ -878,7 +907,7 @@ p {
 }
 .socials-items .socials-link {
   display: inline-block;
-  margin-right: 32px;
+  margin: 0 16px;
   opacity: 0.2;
 }
 .socials-items .socials-link:hover {
