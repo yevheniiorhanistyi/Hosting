@@ -9,41 +9,32 @@ const swiper = new Swiper('.swiper', {
 
 });
 
-window.addEventListener('scroll', trackScroll, { passive: true });
-let pageHeight = document.documentElement.scrollHeight;
+const header = document.querySelector('.header');
+const navbar = document.querySelector(".btn-burger");
+const menuTop = document.querySelector('.menu-top');
+const menuMiddle = document.querySelector('.menu-middle');
+const menuBottom = document.querySelector('.menu-bottom');
 const navItems = document.querySelectorAll('.nav__item');
+const sticky = navbar.offsetTop;
 
-function trackScroll() {
-    let scrolled = window.pageYOffset;
-    let deviceWidth = window.outerWidth;
-    let scrolledPercent = Math.round((scrolled * 100) / pageHeight);
-    let btnBurger = document.querySelector('.btn-burger');
+navbar.addEventListener('click', (event) => {
 
-    if (scrolledPercent > 2 && deviceWidth <= 780) {
-        btnBurger.classList.add('btn-burger-show');
+    if (navbar.classList.contains('btn-burger--active')) {
+        resetNav();
     }
     else {
-        btnBurger.classList.remove('btn-burger-show');
-    }
+        navbar.classList.add('btn-burger--active');
+        menuTop.classList.add('menu-top-click');
+        menuMiddle.classList.add('menu-middle-click');
+        menuBottom.classList.add('menu-bottom-click');
+        document.querySelector('.nav').classList.add('nav--active');
 
-}
+        for (let i = 0; i < navItems.length; i++) {
+            navItems[i].classList.add('nav__item--active');
 
-document.querySelector('.btn-burger').addEventListener('click', (event) => {
-    document.querySelector('.btn-burger').classList.toggle('btn-burger--active');
-    document.querySelector('.nav').classList.toggle('nav--active');
-    const header = document.querySelector('.header');
-
-    for (let i = 0; i < navItems.length; i++) {
-        navItems[i].classList.add('nav__item--active');
-
-        navItems[i].addEventListener('click', resetNav);
-    }
-
-    if (document.querySelector('.btn-burger').classList.contains('btn-burger--active')) {
+            navItems[i].addEventListener('click', resetNav);
+        }
         hideScroll();
-    }
-    else {
-        showScroll();
     }
 });
 
@@ -53,14 +44,17 @@ const hideScroll = () => {
     document.body.style.paddingRight = scrollWidth;
     document.body.style.overflow = 'hidden';
 };
+
 const showScroll = () => {
     document.body.style.paddingRight = '';
     document.body.style.overflow = 'visible';
 };
 
 const resetNav = () => {
-    document.querySelector('.btn-burger').classList.remove('btn-burger--active');
-    document.querySelector('.btn__nav').classList.remove('btn__nav--active');
+    navbar.classList.remove('btn-burger--active');
+    menuTop.classList.remove('menu-top-click');
+    menuMiddle.classList.remove('menu-middle-click');
+    menuBottom.classList.remove('menu-bottom-click');
     document.querySelector('.nav').classList.remove('nav--active');
     for (let i = 0; i < navItems.length; i++) {
         navItems[i].classList.remove('nav__item--active');
@@ -88,3 +82,13 @@ const getScrollbarWidth = () => {
 
     return scrollbarWidth;
 };
+
+let plansWrapper = document.querySelector('.plans-wrapper');
+
+plansWrapper.addEventListener("mouseover", () => {
+    document.querySelector('#secondItem').classList.remove('plans-wrapper__item--active');
+});
+
+plansWrapper.addEventListener("mouseout", () => {
+    document.querySelector('#secondItem').classList.add('plans-wrapper__item--active');
+});
