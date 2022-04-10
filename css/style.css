@@ -33,18 +33,20 @@ h6 {
   margin: 0;
 }
 
-h1 {
+h1,
+h2 {
   font-weight: 100;
   font-size: 40px;
   color: #fff;
 }
 @media (max-width: 780px) {
-  h1 {
+  h1,
+h2 {
     font-size: 28px;
   }
 }
 
-h2 {
+h3 {
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
@@ -52,6 +54,17 @@ h2 {
 
 p {
   margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  border: 0;
 }
 
 .section-outer {
@@ -150,7 +163,7 @@ p {
 /*===   INTRO ===*/
 .section-outer-intro {
   position: relative;
-  background: linear-gradient(300deg, rgba(43, 47, 55, 0.8995973389) 14%, rgba(43, 47, 55, 0) 36%), url("../img/intro-bg.png") no-repeat;
+  background: linear-gradient(300deg, rgba(43, 47, 55, 0.8995973389) 14%, rgba(43, 47, 55, 0) 36%), url("../img/intro-bg.webp") no-repeat;
   background-size: cover;
   background-color: #2b2f37;
 }
@@ -230,6 +243,7 @@ p {
     position: fixed;
     top: 0;
     right: 0;
+    border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.8);
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
@@ -501,9 +515,6 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -728,7 +739,7 @@ p {
   display: block;
   width: 48px;
   height: 68px;
-  background: url(../img/arrow.png) no-repeat 50% 50%;
+  background: url(../img/arrow.webp) no-repeat 50% 50%;
 }
 .btn-testimonials--prev {
   right: 100%;
@@ -840,7 +851,7 @@ p {
 /*=== / BLOG ===*/
 /*===   LOCATION ===*/
 .section-outer-location {
-  background: url("../img/location-bg.png") no-repeat;
+  background: url("../img/location-bg.webp") no-repeat;
   background-size: cover;
 }
 
