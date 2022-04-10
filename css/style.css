@@ -231,8 +231,8 @@ p {
     top: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
     -webkit-transition: 0.3s;
     transition: 0.3s;
     z-index: 300;
@@ -254,18 +254,18 @@ p {
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
+@media (max-width: 780px) {
+  .nav__item a {
+    padding: 8px 12px;
+    font-size: 24px;
+  }
+}
 .nav__item a:hover {
   color: #e84c3d;
 }
-.nav__item--active {
-  padding: 20px 12px;
-}
-.nav__item--active a {
-  font-size: 24px;
-}
 .nav--active {
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
   opacity: 1;
 }
 
