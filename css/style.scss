@@ -258,6 +258,8 @@ p {
 			transition: color $transition;
 
 			@media (max-width: 780px) {
+				@include Roboto();
+				font-weight: 100;
 				padding: $base*2 $base*3;
 				font-size: 24px;
 			}
@@ -1077,3 +1079,53 @@ p {
 }
 
 /*=== / FOOTER ===*/
+
+/*===   LOGIN ===*/
+.section-outer-login {
+	background-color: #2b2f37;
+	height: 100vh;
+}
+
+.form-wrapper {
+	max-width: 300px;
+	max-height: 400px;
+	padding: 20px;
+	margin: 20px auto;
+	background-color: rgba(54, 59, 69, 0.2);
+	border: 1px solid #e84c3d;
+	filter: drop-shadow(2px 3px 2px #000);
+
+}
+
+.form {
+	max-width: 180px;
+	margin: 20px auto;
+}
+
+.form-title {
+	text-align: center;
+	margin-bottom: $base*8;
+}
+
+.form-subtitle {
+	margin-bottom: $base*3;
+	font-weight: 100;
+	color: #fff;
+}
+
+.input {
+	padding: 10px 5px;
+	margin-bottom: $base*10;
+}
+
+.input:active,
+.input:focus {
+	outline: solid 1px #e84c3d;
+}
+
+.btn__nav--form {
+	background-color: #e84c3d;
+	margin: 0 auto $base*4;
+}
+
+/*=== / LOGIN ===*/

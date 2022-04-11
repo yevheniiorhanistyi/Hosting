@@ -92,3 +92,7 @@ plansWrapper.addEventListener("mouseover", () => {
 plansWrapper.addEventListener("mouseout", () => {
     document.querySelector('#secondItem').classList.add('plans-wrapper__item--active');
 });
+
+document.querySelector('.btnIn').onclick = () => {
+    document.location.href = 'login.html';
+};
