@@ -96,3 +96,14 @@ plansWrapper.addEventListener("mouseout", () => {
 document.querySelector('.btnIn').onclick = () => {
     document.location.href = 'login.html';
 };
+
+
+let footerLinks = document.querySelectorAll('.footer-item__title');
+
+for (let item of footerLinks) {
+    item.addEventListener('click', () => {
+        let tabId = item.getAttribute("data-link");
+        let currentLink = document.querySelector(tabId);
+        currentLink.classList.toggle('links-wrapper--active');
+    });
+}

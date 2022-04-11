@@ -1046,14 +1046,24 @@ p {
 		text-transform: uppercase;
 	}
 
-	&__link {
-		color: #5e5e5e;
-		padding-bottom: $base*5;
-		transition: $transition;
+	.links-wrapper {
+		display: flex;
+		flex-direction: column;
 
 		@media (max-width: 760px) {
 			display: none;
 		}
+
+		&--active {
+			display: flex;
+		}
+	}
+
+
+	&__link {
+		color: #5e5e5e;
+		padding-bottom: $base*5;
+		transition: $transition;
 	}
 
 	&__tell {
@@ -1089,9 +1099,8 @@ p {
 .form-wrapper {
 	max-width: 300px;
 	max-height: 400px;
-	padding: 20px;
-	margin: 20px auto;
-	background-color: rgba(54, 59, 69, 0.2);
+	padding: $base*5;
+	margin: $base*5 auto;
 	border: 1px solid #e84c3d;
 	filter: drop-shadow(2px 3px 2px #000);
 
@@ -1099,7 +1108,7 @@ p {
 
 .form {
 	max-width: 180px;
-	margin: 20px auto;
+	margin: $base*5 auto;
 }
 
 .form-title {
@@ -1114,18 +1123,28 @@ p {
 }
 
 .input {
-	padding: 10px 5px;
+	border: 1px solid #000;
+	padding: $base*3 $base;
 	margin-bottom: $base*10;
 }
 
 .input:active,
 .input:focus {
+	border: 1px solid transparent;
 	outline: solid 1px #e84c3d;
 }
 
 .btn__nav--form {
 	background-color: #e84c3d;
 	margin: 0 auto $base*4;
+}
+
+.back-arrow {
+	position: fixed;
+	bottom: 5%;
+	right: 5%;
+	width: 30px;
+	height: 30px;
 }
 
 /*=== / LOGIN ===*/
