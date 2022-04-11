@@ -259,8 +259,8 @@ p {
 
 			@media (max-width: 780px) {
 				@include Roboto();
-				font-weight: 100;
-				padding: $base*2 $base*3;
+				color: #e84c3d;
+				padding: $base*3 $base*3;
 				font-size: 24px;
 			}
 		}
@@ -1123,6 +1123,7 @@ p {
 }
 
 .input {
+	background-color: rgba(255, 255, 255, .8);
 	border: 1px solid #000;
 	padding: $base*3 $base;
 	margin-bottom: $base*10;
