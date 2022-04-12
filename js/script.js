@@ -15,7 +15,6 @@ const menuTop = document.querySelector('.menu-top');
 const menuMiddle = document.querySelector('.menu-middle');
 const menuBottom = document.querySelector('.menu-bottom');
 const navItems = document.querySelectorAll('.nav__item');
-const sticky = navbar.offsetTop;
 
 navbar.addEventListener('click', (event) => {
 

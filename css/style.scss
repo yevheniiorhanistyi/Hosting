@@ -1094,6 +1094,7 @@ p {
 .section-outer-login {
 	background-color: #2b2f37;
 	height: 100vh;
+	overflow: hidden;
 }
 
 .form-wrapper {
@@ -1146,6 +1147,8 @@ p {
 	right: 5%;
 	width: 30px;
 	height: 30px;
+
+	cursor: pointer;
 }
 
 /*=== / LOGIN ===*/
