@@ -1,3 +1,4 @@
+// jshint ignore:start 
 const swiper = new Swiper('.swiper', {
     loop: true,
 
@@ -8,6 +9,8 @@ const swiper = new Swiper('.swiper', {
     },
 
 });
+
+// jshint ignore:end 
 
 const header = document.querySelector('.header');
 const navbar = document.querySelector(".btn-burger");
@@ -92,17 +95,12 @@ plansWrapper.addEventListener("mouseout", () => {
     document.querySelector('#secondItem').classList.add('plans-wrapper__item--active');
 });
 
-document.querySelector('.btnIn').onclick = () => {
-    document.location.href = 'login.html';
-};
+const footerLinks = document.querySelectorAll('.footer-item__title');
 
-
-let footerLinks = document.querySelectorAll('.footer-item__title');
-
-for (let item of footerLinks) {
-    item.addEventListener('click', () => {
-        let tabId = item.getAttribute("data-link");
-        let currentLink = document.querySelector(tabId);
-        currentLink.classList.toggle('links-wrapper--active');
+footerLinks.forEach(item => {
+    item.addEventListener('click', (e) => {
+        const tabId = e.target.getAttribute('data-link');
+        const currentItem = document.querySelector(tabId);
+        currentItem.classList.toggle('links-wrapper--active');
     });
-}
+});
