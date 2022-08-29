@@ -1,9 +1,9 @@
 # Landing page "Nine Cloud Hosting"
-### I used here :
+### Was used here :
 - Gulp
 - SCSS
 - BEM
 <p>
-  
+  <img src="img/preview-host.png"/>
 </p>
 https://yevheniiorhanistyi.github.io/nine-cloud-hosting/
