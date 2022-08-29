@@ -6,4 +6,4 @@
 <p>
   <img src="img/preview-host.png"/>
 </p>
-https://yevheniiorhanistyi.github.io/nine-cloud-hosting/
+https://yevheniiorhanistyi.github.io/Hosting/
